@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Flame, Users, Trophy } from 'lucide-react';
-import { STATS } from '../data';
 
 interface HeroProps {
   onOpenEnrollment: () => void;
@@ -79,23 +78,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEnrollment, onExploreClick }) 
               <span>Vagas limitadas por horário</span>
             </div>
           </div>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="mt-16 pt-12 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {STATS.map((stat, idx) => (
-            <div key={idx} className="relative group">
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight group-hover:text-[#FF3E24] transition-colors">
-                {stat.value}
-              </div>
-              <div className="text-sm font-bold text-neutral-200 uppercase tracking-wider mt-1">
-                {stat.label}
-              </div>
-              <div className="text-xs text-neutral-400 mt-1 line-clamp-1">
-                {stat.description}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
